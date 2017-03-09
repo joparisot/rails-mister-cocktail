@@ -15,7 +15,11 @@ class CocktailsController < ApplicationController
     @cocktail = Cocktail.new(cocktails_params)
     @cocktail.save
 
-    redirect_to cocktails_path
+    if @cocktail.valid?
+      redirect_to cocktail_path(@cocktail)
+    else
+      render :new
+    end
   end
 
   private
