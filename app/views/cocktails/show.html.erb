@@ -1,0 +1,15 @@
+<% content_for(:title_tag) do %>
+  <%= @cocktail.name %>
+<% end %>
+
+
+<h1><%= @cocktail.name %></h1>
+
+<ul>
+  <% @cocktail.doses.each do |dose| %>
+    <li><%= dose.ingredient.name %></li>
+  <% end %>
+</ul>
+<%= link_to "Add a dose", new_cocktail_dose_path(@cocktail) %>
+<%= link_to "Back home", cocktails_path %>
+
