@@ -1,4 +1,5 @@
-<div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('cocktail.png');">
+<div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+         url('<%= cl_image_path cocktail.photo.path, height: 300, width: 400, crop: :fill %>')">
   <div class="card-category"><%= link_to cocktail.name, cocktail_path(cocktail) %></div>
   <div class="card-description">
   <!--   <% cocktail.doses.each do |dose| %>

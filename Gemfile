@@ -5,6 +5,11 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+# Attachinery setup
+gem 'cloudinary', '1.1.7'
+gem 'attachinary', github: 'assembler/attachinary'
+gem 'jquery-fileupload-rails'
+
 gem 'figaro'
 ruby '2.3.3'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
