@@ -1,10 +1,16 @@
 <div class="container">
   <div class="row">
-    <div class="col-xs-12 col-sm-6">
-      <% @cocktails.each do |cocktail| %>
-        <%= render 'cocktail_card', cocktail: cocktail %>
-      <% end %>
-      <%= link_to "Add a new cocktail", new_cocktail_path %>
+    <% @cocktails.each do |cocktail| %>
+      <div class="col-xs-12 col-sm-4">
+      <%= render 'cocktail_card', cocktail: cocktail %>
+      </div>
+    <% end %>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="container-link">
+        <%= link_to "Add a new cocktail", new_cocktail_path, class: "btn btn-primary" %>
+      </div>
     </div>
   </div>
 </div>

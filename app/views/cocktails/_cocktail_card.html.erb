@@ -1,13 +1,10 @@
-<div class="card">
-  <div class="card-header">
-    <h1>
-      <%= link_to cocktail.name, cocktail_path(cocktail) %>
-    </h1>
-  </div>
-  <div class="card-content">
-    <% cocktail.doses.each do |dose| %>
+<div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('cocktail.png');">
+  <div class="card-category"><%= link_to cocktail.name, cocktail_path(cocktail) %></div>
+  <div class="card-description">
+  <!--   <% cocktail.doses.each do |dose| %>
       <li><%= dose.ingredient.name %></li>
-    <% end %>
-    <%= link_to "Add a dose", new_cocktail_dose_path(cocktail) %>
+    <% end %> -->
+    <!-- <%= link_to "Add a dose", cocktail_path(cocktail) %> -->
   </div>
+  <%= link_to "", cocktail_path(cocktail), class: "card-link" %>
 </div>
